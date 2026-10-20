@@ -15,7 +15,7 @@ xcrun swiftc -target "arm64-apple-macosx${minimum_macos_version}" -parse-as-libr
   -framework SwiftUI -framework AppKit -framework Security \
   "${TMPDIR:-/tmp}/CNDOV.o" Vendor/zeromq-install/lib/libzmq.a -lc++ -lz \
   -o "NS Train Monitor.app/Contents/MacOS/NS-Train-Monitor" \
-  NS-Train-Monitor.swift
+  App/*.swift Models/*.swift Services/*.swift Utilities/*.swift Views/*.swift
 xcrun actool Assets.xcassets --compile "NS Train Monitor.app/Contents/Resources" \
   --platform macosx --minimum-deployment-target "$minimum_macos_version" --app-icon AppIcon \
   --output-partial-info-plist "${TMPDIR:-/tmp}/ns-train-monitor-assets.plist" >/dev/null

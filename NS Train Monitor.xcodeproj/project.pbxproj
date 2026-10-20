@@ -7,6 +7,23 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		892B6818308819CA00DEAB23 /* Models.swift in Sources */ = {isa = PBXBuildFile; fileRef = 892B6817308819CA00DEAB23 /* Models.swift */; };
+		892B681A308819CA00DEAB23 /* NDOVSubscriber.swift in Sources */ = {isa = PBXBuildFile; fileRef = 892B6819308819CA00DEAB23 /* NDOVSubscriber.swift */; };
+		892B681C308819CA00DEAB23 /* DepartureCardRenderer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 892B681B308819CA00DEAB23 /* DepartureCardRenderer.swift */; };
+		892B681E308819CA00DEAB23 /* Keychain.swift in Sources */ = {isa = PBXBuildFile; fileRef = 892B681D308819CA00DEAB23 /* Keychain.swift */; };
+		892B6820308819CA00DEAB23 /* NSClient.swift in Sources */ = {isa = PBXBuildFile; fileRef = 892B681F308819CA00DEAB23 /* NSClient.swift */; };
+		892B6822308819CA00DEAB23 /* NotificationClient.swift in Sources */ = {isa = PBXBuildFile; fileRef = 892B6821308819CA00DEAB23 /* NotificationClient.swift */; };
+		892B6824308819CB00DEAB23 /* MonitorTime.swift in Sources */ = {isa = PBXBuildFile; fileRef = 892B6823308819CB00DEAB23 /* MonitorTime.swift */; };
+		892B6826308819CB00DEAB23 /* MonitorModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 892B6825308819CB00DEAB23 /* MonitorModel.swift */; };
+		892B6828308819CB00DEAB23 /* RootView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 892B6827308819CB00DEAB23 /* RootView.swift */; };
+		892B682A308819CB00DEAB23 /* MonitorSecondaryButtonStyle.swift in Sources */ = {isa = PBXBuildFile; fileRef = 892B6829308819CB00DEAB23 /* MonitorSecondaryButtonStyle.swift */; };
+		892B682C308819CB00DEAB23 /* OverviewView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 892B682B308819CB00DEAB23 /* OverviewView.swift */; };
+		892B682E308819CB00DEAB23 /* ActivityView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 892B682D308819CB00DEAB23 /* ActivityView.swift */; };
+		892B6830308819CC00DEAB23 /* PlanEditor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 892B682F308819CC00DEAB23 /* PlanEditor.swift */; };
+		892B6832308819CC00DEAB23 /* StationComboBox.swift in Sources */ = {isa = PBXBuildFile; fileRef = 892B6831308819CC00DEAB23 /* StationComboBox.swift */; };
+		892B6834308819CC00DEAB23 /* ConnectionsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 892B6833308819CC00DEAB23 /* ConnectionsView.swift */; };
+		892B6836308819CC00DEAB23 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 892B6835308819CC00DEAB23 /* AppDelegate.swift */; };
+		892B6838308819CC00DEAB23 /* MenuBarMenu.swift in Sources */ = {isa = PBXBuildFile; fileRef = 892B6837308819CC00DEAB23 /* MenuBarMenu.swift */; };
 		A00000000000000000000001 /* NS-Train-Monitor.swift in Sources */ = {isa = PBXBuildFile; fileRef = B00000000000000000000001 /* NS-Train-Monitor.swift */; };
 		A00000000000000000000002 /* Vendor/CNDOV/CNDOV.c in Sources */ = {isa = PBXBuildFile; fileRef = B00000000000000000000002 /* Vendor/CNDOV/CNDOV.c */; };
 		A00000000000000000000003 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = B00000000000000000000003 /* Assets.xcassets */; };
@@ -15,6 +32,23 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		892B6817308819CA00DEAB23 /* Models.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Models.swift; sourceTree = "<group>"; };
+		892B6819308819CA00DEAB23 /* NDOVSubscriber.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NDOVSubscriber.swift; sourceTree = "<group>"; };
+		892B681B308819CA00DEAB23 /* DepartureCardRenderer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DepartureCardRenderer.swift; sourceTree = "<group>"; };
+		892B681D308819CA00DEAB23 /* Keychain.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Keychain.swift; sourceTree = "<group>"; };
+		892B681F308819CA00DEAB23 /* NSClient.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NSClient.swift; sourceTree = "<group>"; };
+		892B6821308819CA00DEAB23 /* NotificationClient.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NotificationClient.swift; sourceTree = "<group>"; };
+		892B6823308819CB00DEAB23 /* MonitorTime.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MonitorTime.swift; sourceTree = "<group>"; };
+		892B6825308819CB00DEAB23 /* MonitorModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MonitorModel.swift; sourceTree = "<group>"; };
+		892B6827308819CB00DEAB23 /* RootView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RootView.swift; sourceTree = "<group>"; };
+		892B6829308819CB00DEAB23 /* MonitorSecondaryButtonStyle.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MonitorSecondaryButtonStyle.swift; sourceTree = "<group>"; };
+		892B682B308819CB00DEAB23 /* OverviewView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OverviewView.swift; sourceTree = "<group>"; };
+		892B682D308819CB00DEAB23 /* ActivityView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ActivityView.swift; sourceTree = "<group>"; };
+		892B682F308819CC00DEAB23 /* PlanEditor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlanEditor.swift; sourceTree = "<group>"; };
+		892B6831308819CC00DEAB23 /* StationComboBox.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StationComboBox.swift; sourceTree = "<group>"; };
+		892B6833308819CC00DEAB23 /* ConnectionsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ConnectionsView.swift; sourceTree = "<group>"; };
+		892B6835308819CC00DEAB23 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		892B6837308819CC00DEAB23 /* MenuBarMenu.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MenuBarMenu.swift; sourceTree = "<group>"; };
 		B00000000000000000000001 /* NS-Train-Monitor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "NS-Train-Monitor.swift"; sourceTree = "<group>"; };
 		B00000000000000000000002 /* Vendor/CNDOV/CNDOV.c */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.c; path = Vendor/CNDOV/CNDOV.c; sourceTree = "<group>"; };
 		B00000000000000000000003 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -39,15 +73,72 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
-		D00000000000000000000001 = {
+		892B683B30881EBD00DEAB23 /* App */ = {
 			isa = PBXGroup;
 			children = (
 				B00000000000000000000001 /* NS-Train-Monitor.swift */,
+				892B6835308819CC00DEAB23 /* AppDelegate.swift */,
+			);
+			path = App;
+			sourceTree = "<group>";
+		};
+		892B683C30881EBD00DEAB23 /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				892B6817308819CA00DEAB23 /* Models.swift */,
+				892B6825308819CB00DEAB23 /* MonitorModel.swift */,
+			);
+			path = Models;
+			sourceTree = "<group>";
+		};
+		892B683D30881EBE00DEAB23 /* Services */ = {
+			isa = PBXGroup;
+			children = (
+				892B681F308819CA00DEAB23 /* NSClient.swift */,
+				892B6821308819CA00DEAB23 /* NotificationClient.swift */,
+				892B6819308819CA00DEAB23 /* NDOVSubscriber.swift */,
+				892B681D308819CA00DEAB23 /* Keychain.swift */,
+			);
+			path = Services;
+			sourceTree = "<group>";
+		};
+		892B683E30881EBF00DEAB23 /* Utilities */ = {
+			isa = PBXGroup;
+			children = (
+				892B6823308819CB00DEAB23 /* MonitorTime.swift */,
+				892B681B308819CA00DEAB23 /* DepartureCardRenderer.swift */,
+			);
+			path = Utilities;
+			sourceTree = "<group>";
+		};
+		892B683F30881EC000DEAB23 /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				892B6827308819CB00DEAB23 /* RootView.swift */,
+				892B682B308819CB00DEAB23 /* OverviewView.swift */,
+				892B682D308819CB00DEAB23 /* ActivityView.swift */,
+				892B682F308819CC00DEAB23 /* PlanEditor.swift */,
+				892B6831308819CC00DEAB23 /* StationComboBox.swift */,
+				892B6833308819CC00DEAB23 /* ConnectionsView.swift */,
+				892B6837308819CC00DEAB23 /* MenuBarMenu.swift */,
+				892B6829308819CB00DEAB23 /* MonitorSecondaryButtonStyle.swift */,
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
+		D00000000000000000000001 = {
+			isa = PBXGroup;
+			children = (
 				B00000000000000000000003 /* Assets.xcassets */,
 				B00000000000000000000007 /* Info.plist */,
 				D00000000000000000000003 /* Vendor */,
 				B0000000000000000000000A /* README.md */,
 				D00000000000000000000002 /* Products */,
+				892B683B30881EBD00DEAB23 /* App */,
+				892B683C30881EBD00DEAB23 /* Models */,
+				892B683D30881EBE00DEAB23 /* Services */,
+				892B683E30881EBF00DEAB23 /* Utilities */,
+				892B683F30881EC000DEAB23 /* Views */,
 			);
 			sourceTree = "<group>";
 		};
@@ -140,8 +231,25 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				892B6824308819CB00DEAB23 /* MonitorTime.swift in Sources */,
+				892B6818308819CA00DEAB23 /* Models.swift in Sources */,
+				892B6822308819CA00DEAB23 /* NotificationClient.swift in Sources */,
 				A00000000000000000000001 /* NS-Train-Monitor.swift in Sources */,
+				892B6826308819CB00DEAB23 /* MonitorModel.swift in Sources */,
+				892B681A308819CA00DEAB23 /* NDOVSubscriber.swift in Sources */,
+				892B6820308819CA00DEAB23 /* NSClient.swift in Sources */,
+				892B682A308819CB00DEAB23 /* MonitorSecondaryButtonStyle.swift in Sources */,
 				A00000000000000000000002 /* Vendor/CNDOV/CNDOV.c in Sources */,
+				892B681C308819CA00DEAB23 /* DepartureCardRenderer.swift in Sources */,
+				892B6830308819CC00DEAB23 /* PlanEditor.swift in Sources */,
+				892B6838308819CC00DEAB23 /* MenuBarMenu.swift in Sources */,
+				892B6834308819CC00DEAB23 /* ConnectionsView.swift in Sources */,
+				892B6836308819CC00DEAB23 /* AppDelegate.swift in Sources */,
+				892B6832308819CC00DEAB23 /* StationComboBox.swift in Sources */,
+				892B681E308819CA00DEAB23 /* Keychain.swift in Sources */,
+				892B682E308819CB00DEAB23 /* ActivityView.swift in Sources */,
+				892B6828308819CB00DEAB23 /* RootView.swift in Sources */,
+				892B682C308819CB00DEAB23 /* OverviewView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -243,10 +351,11 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				CODE_SIGN_IDENTITY = "-";
-				CODE_SIGN_STYLE = Manual;
+				CODE_SIGN_IDENTITY = "Apple Development";
+				CODE_SIGN_STYLE = Automatic;
 				COMBINE_HIDPI_IMAGES = YES;
 				DEAD_CODE_STRIPPING = YES;
+				DEVELOPMENT_TEAM = P4FJXWLTKZ;
 				ENABLE_APP_SANDBOX = NO;
 				EXECUTABLE_NAME = "NS-Train-Monitor";
 				GENERATE_INFOPLIST_FILE = NO;
@@ -271,6 +380,7 @@
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = local.nstrainmonitor.native;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE_SPECIFIER = "";
 				SWIFT_INCLUDE_PATHS = "$(inherited) $(SRCROOT)/Vendor/CNDOV";
 			};
 			name = Debug;
@@ -279,10 +389,11 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				CODE_SIGN_IDENTITY = "-";
-				CODE_SIGN_STYLE = Manual;
+				CODE_SIGN_IDENTITY = "Apple Development";
+				CODE_SIGN_STYLE = Automatic;
 				COMBINE_HIDPI_IMAGES = YES;
 				DEAD_CODE_STRIPPING = YES;
+				DEVELOPMENT_TEAM = P4FJXWLTKZ;
 				ENABLE_APP_SANDBOX = NO;
 				EXECUTABLE_NAME = "NS-Train-Monitor";
 				GENERATE_INFOPLIST_FILE = NO;
@@ -307,6 +418,7 @@
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = local.nstrainmonitor.native;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE_SPECIFIER = "";
 				SWIFT_INCLUDE_PATHS = "$(inherited) $(SRCROOT)/Vendor/CNDOV";
 			};
 			name = Release;
