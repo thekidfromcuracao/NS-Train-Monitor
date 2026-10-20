@@ -10,6 +10,9 @@ NS Train Monitor.app/
 *.o
 *.dSYM/
 .build/
+DerivedData/
+xcuserdata/
+*.xcuserstate
 
 # ZeroMQ download/build workspace (the required headers and static library
 # under Vendor/zeromq-install are intentionally versioned)

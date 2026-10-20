@@ -12,7 +12,27 @@ Double-click **NS Train Monitor.app**. The app imports the adjacent legacy `conf
 
 ## Rebuild
 
-Run `bash build-app.sh`. Xcode Command Line Tools are required.
+### Xcode
+
+Open `NS Train Monitor.xcodeproj`, select the **NS Train Monitor** scheme and **My Mac**, then press **⌘R** to build and run. The project requires macOS 27 or later and currently targets Apple silicon because the bundled ZeroMQ static library is arm64-only.
+
+The project includes the Swift app, C bridge, ZeroMQ library, app icon, and dependency license. It uses local ad-hoc signing, so a developer team is not required for local builds. The bundle identifier and version match the existing app, preserving its saved settings and Keychain lookup. App Sandbox is disabled, matching the script-built app.
+
+Xcode places the built app in its DerivedData folder under `Build/Products/Debug/` (or `Release/`). Find it under **Products → NS Train Monitor.app → Show in Finder**. To create a release archive, choose **Product → Archive**. Distribution signing and notarization require separate configuration.
+
+For a command-line Xcode build:
+
+```sh
+xcodebuild -project "NS Train Monitor.xcodeproj" -scheme "NS Train Monitor" -configuration Release build
+```
+
+When running from Xcode, enter the NS API key and monitor settings in the app if they have not already been saved. Legacy `config.json` import only looks beside the built `.app`; the project does not copy credentials into the bundle.
+
+### Build script
+
+Run `bash build-app.sh`. Xcode Command Line Tools are required. This builds `NS Train Monitor.app` directly in the repository folder.
+
+The script reads the minimum macOS version from `Info.plist` and applies it to the Swift compiler, C compiler, and asset compiler.
 
 The repository includes the ZeroMQ headers and static library needed for the optional NDOV connection, so no Homebrew packages are required.
 
