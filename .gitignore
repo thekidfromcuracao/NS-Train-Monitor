@@ -1,0 +1,25 @@
+# Local credentials and settings
+config.json
+
+# macOS and generated application bundle
+.DS_Store
+NS Train Monitor.app/
+*.zip
+
+# Compiler output and caches
+*.o
+*.dSYM/
+.build/
+
+# ZeroMQ download/build workspace (the required headers and static library
+# under Vendor/zeromq-install are intentionally versioned)
+Vendor/src/
+Vendor/zeromq-install/lib/*.la
+Vendor/zeromq-install/lib/pkgconfig/
+Vendor/zeromq-install/share/
+
+# Old icon-generation working files
+AppIcon.iconset/
+work-iconcheck.iconset/
+AppIcon.png
+
