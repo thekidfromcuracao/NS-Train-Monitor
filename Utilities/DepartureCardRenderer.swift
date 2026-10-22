@@ -2,6 +2,10 @@ import AppKit
 
 enum DepartureCardRenderer {
     static func png(route: String, plan: MonitorPlan, journeys: [Journey], updated: Date) -> Data? {
+        // Exported cards always have a light background, regardless of the app appearance.
+        let textColor = NSColor(calibratedWhite: 0.12, alpha: 1)
+        let secondaryTextColor = NSColor(calibratedWhite: 0.36, alpha: 1)
+        let separatorColor = NSColor(calibratedWhite: 0.82, alpha: 1)
         let rows = Array(journeys.prefix(5))
         let width = 900, height = 250 + max(1, rows.count) * 92
         guard let bitmap = NSBitmapImageRep(bitmapDataPlanes: nil, pixelsWide: width, pixelsHigh: height,
@@ -33,20 +37,24 @@ enum DepartureCardRenderer {
              font: .systemFont(ofSize: 19), color: NSColor.white.withAlphaComponent(0.7))
 
         if rows.isEmpty {
-            draw("No departures returned", top: 235, height: 42, font: .systemFont(ofSize: 25, weight: .semibold), color: .secondaryLabelColor)
+            draw("No departures returned", top: 235, height: 42, font: .systemFont(ofSize: 25, weight: .semibold), color: secondaryTextColor)
         } else {
             for (index, journey) in rows.enumerated() {
                 let top = CGFloat(218 + index * 92)
                 if index > 0 {
-                    NSColor.separatorColor.setFill(); NSRect(x: 52, y: CGFloat(height) - top + 17, width: 796, height: 1).fill()
+                    separatorColor.setFill(); NSRect(x: 52, y: CGFloat(height) - top + 17, width: 796, height: 1).fill()
                 }
-                draw(journey.planned, top: top, height: 36, font: .monospacedDigitSystemFont(ofSize: 27, weight: .bold), color: .labelColor, width: 110)
+                draw(journey.planned, top: top, height: 36, font: .monospacedDigitSystemFont(ofSize: 27, weight: .bold), color: textColor, width: 110)
                 let expected = journey.cancelled ? "Cancelled" : journey.delay > 0 ? "Expected \(journey.actual) · +\(journey.delay) min" : "On time"
-                let statusColor: NSColor = journey.cancelled ? .systemRed : journey.delay > 0 ? .systemOrange : .systemGreen
+                let statusColor: NSColor = journey.cancelled
+                    ? NSColor(calibratedRed: 0.75, green: 0.12, blue: 0.12, alpha: 1)
+                    : journey.delay > 0
+                        ? NSColor(calibratedRed: 0.65, green: 0.30, blue: 0, alpha: 1)
+                        : NSColor(calibratedRed: 0.08, green: 0.45, blue: 0.20, alpha: 1)
                 draw(expected, top: top + 4, height: 30, font: .systemFont(ofSize: 21, weight: .semibold), color: statusColor, x: 180, width: 470)
                 draw("Platform \(journey.platform.isEmpty ? "—" : journey.platform)", top: top + 4, height: 30,
-                     font: .systemFont(ofSize: 21, weight: .semibold), color: .labelColor, alignment: .right, x: 650, width: 198)
-                draw(journey.destination, top: top + 41, height: 26, font: .systemFont(ofSize: 18), color: .secondaryLabelColor, x: 180, width: 668)
+                     font: .systemFont(ofSize: 21, weight: .semibold), color: textColor, alignment: .right, x: 650, width: 198)
+                draw(journey.destination, top: top + 41, height: 26, font: .systemFont(ofSize: 18), color: secondaryTextColor, x: 180, width: 668)
             }
         }
         NSGraphicsContext.restoreGraphicsState()

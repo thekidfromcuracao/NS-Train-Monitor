@@ -173,6 +173,6 @@ import Foundation
         if let key = j["NsApiKey"] as? String, !key.hasPrefix("REPLACE_") { Keychain.save(key); apiKey = key }
         persist()
     }
-    private func log(_ s: String) { logs.insert("\(Date.now.formatted(date: .omitted, time: .shortened))  \(s)", at: 0); if logs.count > 150 { logs.removeLast() } }
+    private func log(_ s: String) { logs.insert("\(Date.now.formatted(date: .abbreviated, time: .shortened))  \(s)", at: 0); if logs.count > 150 { logs.removeLast() } }
     static let fallbackStations: [Station] = [("ANA","Anna Paulowna"),("ASD","Amsterdam Centraal"),("ASB","Amsterdam Bijlmer ArenA"),("ASS","Amsterdam Zuid"),("AMF","Amersfoort Centraal"),("AH","Arnhem Centraal"),("ALM","Almere Centrum"),("APD","Apeldoorn"),("BRD","Breda"),("DT","Delft"),("DV","Deventer"),("EHV","Eindhoven Centraal"),("ES","Enschede"),("GVC","Den Haag Centraal"),("GD","Gouda"),("GN","Groningen"),("HLM","Haarlem"),("HFD","Hoofddorp"),("HORN","Hoorn"),("LC","Leeuwarden"),("LEID","Leiden Centraal"),("MAS","Maastricht"),("NML","Nijmegen"),("RTA","Rotterdam Centraal"),("SHL","Schiphol Airport"),("HT","'s-Hertogenbosch"),("TB","Tilburg"),("UT","Utrecht Centraal"),("ZL","Zwolle")].map { Station(code: $0.0, name: $0.1) }.sorted { $0.name < $1.name }
 }

@@ -31,7 +31,10 @@ struct OverviewView: View {
                 }
             }; Spacer(); Circle().fill(model.running.contains(p.id) ? .green : .gray.opacity(0.4)).frame(width: 10, height: 10) }
             HStack {
-                Button(model.running.contains(p.id) ? "Stop" : "Start") { model.toggle(p) }.buttonStyle(.borderedProminent)
+                Button { model.toggle(p) } label: {
+                    Text(model.running.contains(p.id) ? "Stop" : "Start")
+                        .frame(minWidth: 32)
+                }.buttonStyle(MonitorSecondaryButtonStyle(isProminent: true))
                 Button("Check now") { model.checkNow(p) }.buttonStyle(MonitorSecondaryButtonStyle()).disabled(model.working.contains(p.id))
                 Button("Edit") { edit(p) }.buttonStyle(MonitorSecondaryButtonStyle())
                 Spacer(); if model.working.contains(p.id) { ProgressView().controlSize(.small) }
